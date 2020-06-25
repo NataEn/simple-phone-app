@@ -27,25 +27,25 @@ function App() {
         <header>header</header>
         <SideBar />
         <Switch>
-          <Route path="/login">
+          <Route exact path="/login">
             <Login />
           </Route>
-          <Route path="/myOrders">
+          <Route exact path="/myOrders">
             <MyOrders />
           </Route>
-          <Route path="/myPrices">
+          <Route exact path="/myPrices">
             <MyPrices />
           </Route>
-          <Route path="/updateDetails">
+          <Route exact path="/updateDetails">
             <MyAccount />
           </Route>
-          <Route path="/changePassword">
+          <Route exact path="/changePassword">
             <MyAccount />
           </Route>
-          <Route path="/faq">
+          <Route exact path="/faq">
             <FAQ />
           </Route>
-          <Route path="/">
+          <Route exact path="/">
             <Main data={123} />
           </Route>
         </Switch>

@@ -5,6 +5,6 @@ const Main = () => {
   useEffect(() => {
     setItem(2);
   }, []);
-  return <div></div>;
+  return <div>Main page</div>;
 };
 export default Main;
