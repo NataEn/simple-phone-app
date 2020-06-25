@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-import "./ChangePassword.css";
+import "./MyAccount.css";
 
-const ChangePassword = () => {
+const MyAccount = () => {
   const [item, setItem] = useState(1);
   useEffect(() => {
     setItem(2);
   }, []);
-  return <div>my content</div>;
+  return <div>My Account Page</div>;
 };
-export default ChangePassword;
+export default MyAccount;

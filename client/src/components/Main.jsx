@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
-import "./FAQ.css";
 
-const FAQ = () => {
+const Main = () => {
   const [item, setItem] = useState(1);
   useEffect(() => {
     setItem(2);
   }, []);
-  return <div>my content</div>;
+  return <div></div>;
 };
-export default FAQ;
+export default Main;

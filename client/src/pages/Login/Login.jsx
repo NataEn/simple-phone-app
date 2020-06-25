@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-import "./Home.css";
+import "./Login.css";
 
-const Home = () => {
+const Login = () => {
   const [item, setItem] = useState(1);
   useEffect(() => {
     setItem(2);
   }, []);
-  return <div>my content</div>;
+  return <div>Login page</div>;
 };
-export default Home;
+export default Login;

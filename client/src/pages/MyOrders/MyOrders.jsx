@@ -6,6 +6,6 @@ const MyOrders = () => {
   useEffect(() => {
     setItem(2);
   }, []);
-  return <div>my content</div>;
+  return <div>my Orders page</div>;
 };
 export default MyOrders;
