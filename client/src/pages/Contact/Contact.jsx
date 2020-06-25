@@ -7,7 +7,7 @@ const Contact = (props) => {
   let { id } = useParams();
 
   return (
-    <div>
+    <div className="contact_page_div">
       <ContactIcon />
       <h3> contact with ID: {id}</h3>
     </div>
