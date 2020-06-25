@@ -15,6 +15,7 @@ import Lock from "@material-ui/icons/Lock";
 import Help from "@material-ui/icons/Help";
 import Person from "@material-ui/icons/Person";
 import Tag from "@material-ui/icons/LocalOffer";
+import Bar from "@material-ui/icons/Dehaze";
 import { Link } from "react-router-dom";
 
 const useStyles = makeStyles({
@@ -52,6 +53,10 @@ const SideBar = () => {
       onKeyDown={toggleDrawer(false)}
     >
       <List>
+        <Button onClick={toggleDrawer(!state)}>
+          <Bar />
+        </Button>
+        <Divider />
         {[
           { text: "Login", icon: <Login />, url: "login" },
           { text: "My Orders", icon: <Chart />, url: "myOrders" },
@@ -75,7 +80,9 @@ const SideBar = () => {
   return (
     <div>
       <React.Fragment>
-        <Button onClick={toggleDrawer(true)}>left</Button>
+        <Button onClick={toggleDrawer(true)}>
+          <Bar />
+        </Button>
         <SwipeableDrawer
           anchor={"left"}
           open={state}
