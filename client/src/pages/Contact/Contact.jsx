@@ -9,11 +9,9 @@ const Contact = (props) => {
   const contact = props.contactsList[personId];
   return (
     <>
-      <div className="contact_page_div">
-        <ContactIcon />
-        <h3>{contact.name}</h3>
-        <span>email: {contact.email}</span>
-      </div>
+      <ContactIcon />
+      <span>{contact.name}</span>
+      <span>{contact.email}</span>
     </>
   );
 };

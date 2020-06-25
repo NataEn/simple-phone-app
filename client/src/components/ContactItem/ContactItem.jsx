@@ -5,12 +5,13 @@ import { Link } from "react-router-dom";
 
 const Contact = (props) => {
   return (
-    <div>
+    <>
+      <ContactIcon />
       <Link to={`contact/${props.contact.id}`}>
-        <ContactIcon />
-        {props.contact.name}
+        <td>{props.contact.name}</td>
       </Link>
-    </div>
+      <td>{props.contact.email}</td>
+    </>
   );
 };
 export default Contact;
