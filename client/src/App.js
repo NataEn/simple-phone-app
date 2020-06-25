@@ -7,6 +7,7 @@ import MyAccount from "./pages/MyAccount/MyAccount";
 import MyOrders from "./pages/MyOrders/MyOrders";
 import MyPrices from "./pages/MyPrices/MyPrices";
 import FAQ from "./pages/FAQ/FAQ";
+import Contact from "./pages/Contact/Contact";
 import "./App.css";
 
 function App() {
@@ -45,6 +46,7 @@ function App() {
           <Route exact path="/faq">
             <FAQ />
           </Route>
+          <Route path="/contact/:id" component={Contact} />
           <Route exact path="/">
             <Main data={123} />
           </Route>
