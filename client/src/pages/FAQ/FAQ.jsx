@@ -6,6 +6,6 @@ const FAQ = () => {
   useEffect(() => {
     setItem(2);
   }, []);
-  return <div>my content</div>;
+  return <div>FAQ Page</div>;
 };
 export default FAQ;
