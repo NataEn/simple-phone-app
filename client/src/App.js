@@ -58,9 +58,11 @@ function App() {
           <Route exact path="/faq">
             <FAQ />
           </Route>
-          <Route path="/contact/:id" component={Contact} />
+          <Route path="/contact/:id">
+            {contactsList && <Contact contactsList={contactsList} />}
+          </Route>
           <Route exact path="/">
-            <Main contactList={contactsList} />
+            <Main contactsList={contactsList} />
           </Route>
         </Switch>
         <footer>footer</footer>

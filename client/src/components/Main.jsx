@@ -31,8 +31,10 @@ const Main = (props) => {
   return (
     <div>
       <h3>My Contacts</h3>
-      {props.contactList.length ? (
-        props.contactList.map((contact) => <ContactItem contact={contact} />)
+      {props.contactsList.length ? (
+        props.contactsList.map((contact, i) => (
+          <ContactItem contact={contact} />
+        ))
       ) : (
         <div className="loader"></div>
       )}
