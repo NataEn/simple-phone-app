@@ -6,9 +6,9 @@ import { Link } from "react-router-dom";
 const Contact = (props) => {
   return (
     <div>
-      <Link to={`contact/:${props.id}`}>
+      <Link to={`contact/:${props.contact.id}`}>
         <ContactIcon />
-        {props.name}
+        {props.contact.name}
       </Link>
     </div>
   );

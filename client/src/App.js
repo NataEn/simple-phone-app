@@ -10,12 +10,24 @@ import FAQ from "./pages/FAQ/FAQ";
 import Contact from "./pages/Contact/Contact";
 import "./App.css";
 
+const getContacts = () => {
+  // const fetchUrl = "http://localhost:3030/contacts";
+  const fetchUrl = "https://jsonplaceholder.typicode.com/users";
+  const data = fetch(fetchUrl)
+    .then((response) => response.json())
+    .then((data) => {
+      return data;
+    });
+  return data;
+};
+
 function App() {
-  const [people, setPeople] = useState([]);
+  const [contactsList, setContactsList] = useState([]);
 
   const fetchPeople = async () => {
-    // const people = await getPeople();
-    setPeople([1, 2, 3, 4]);
+    const contacts = await getContacts();
+    console.log("contacts: ", contacts);
+    setContactsList([...contacts]);
   };
 
   useEffect(() => {
@@ -48,7 +60,7 @@ function App() {
           </Route>
           <Route path="/contact/:id" component={Contact} />
           <Route exact path="/">
-            <Main data={123} />
+            <Main contactList={contactsList} />
           </Route>
         </Switch>
         <footer>footer</footer>
